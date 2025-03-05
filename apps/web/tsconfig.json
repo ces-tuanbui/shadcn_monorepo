@@ -17,7 +17,8 @@
     "next.config.mjs",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
-, "../../packages/ui/src/components/navigation-menu.tsx", "../../packages/ui/src/components/separator.tsx", "../../packages/ui/src/components/sheet.tsx", "app/page.tsx"  ],
+    ".next/types/**/*.ts",
+    "app/page.tsx"
+  ],
   "exclude": ["node_modules"]
 }

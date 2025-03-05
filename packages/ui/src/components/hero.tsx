@@ -1,10 +1,10 @@
 "use client";
-import { Badge } from "@workspace/ui/components/badge";
-import { Button } from "@workspace/ui/components/button";
 import { ArrowRight } from "lucide-react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
+import { Badge } from "./ui/badge";
+import { Button } from "./ui/button";
 
 export const HeroSection = () => {
   const { theme } = useTheme();
