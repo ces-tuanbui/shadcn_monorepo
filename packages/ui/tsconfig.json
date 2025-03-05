@@ -7,6 +7,6 @@
       "@workspace/ui/*": ["./src/*"]
     }
   },
-  "include": ["."],
+  "include": [".", "../../apps/web/components/layout/navbar.tsx", "../../apps/web/app/page.tsx"],
   "exclude": ["node_modules", "dist"]
 }
