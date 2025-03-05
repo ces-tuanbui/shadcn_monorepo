@@ -1,6 +1,8 @@
 "use client";
 import { ChevronsDown, Github, Menu } from "lucide-react";
 import React from "react";
+import Link from "next/link";
+import Image from "next/image";
 import {
   Sheet,
   SheetContent,
@@ -8,8 +10,10 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@workspace/ui/components/sheet";
-import { Separator } from "@workspace/ui/components/separator";
+} from "./ui/sheet";
+import { Button } from "./ui/button";
+import { Separator } from "./ui/separator";
+import { ToggleTheme } from "./toogle-theme";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -17,11 +21,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-} from "@workspace/ui/components/navigation-menu";
-import { Button } from "@workspace/ui/components/button";
-import Link from "next/link";
-import Image from "next/image";
-import { ToggleTheme } from "./toogle-theme";
+} from "./ui/navigation-menu";
 
 interface RouteProps {
   href: string;
