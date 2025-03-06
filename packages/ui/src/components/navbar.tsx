@@ -10,9 +10,9 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "./ui/sheet";
-import { Button } from "./ui/button";
-import { Separator } from "./ui/separator";
+} from "./ui/sheet/sheet";
+import { Button } from "./ui/button/button";
+import { Separator } from "./ui/separator/separator";
 import { ToggleTheme } from "./toogle-theme";
 import {
   NavigationMenu,
@@ -21,7 +21,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-} from "./ui/navigation-menu";
+} from "./ui/navigation-menu/navigation-menu";
 
 interface RouteProps {
   href: string;

@@ -3,8 +3,8 @@ import { ArrowRight } from "lucide-react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
-import { Badge } from "./ui/badge";
-import { Button } from "./ui/button";
+import { Badge } from "./ui/badge/badge";
+import { Button } from "./ui/button/button";
 
 export const HeroSection = () => {
   const { theme } = useTheme();
