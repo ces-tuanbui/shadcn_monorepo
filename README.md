@@ -1,3 +1,20 @@
+# Monorepo with TurboRepo, Next.js, Tailwind CSS, Jest and Storybook
+
+## Demo 👀
+
+https://shadcn-monorepo-web.vercel.app/
+
+## What's inside?
+
+### Apps and Packages
+- `web`: a landing page 
+- `storybook`: document for @workspace/ui
+- `@workspace/ui`: a stub React component library for both `web` and `storybook` applications
+- `eslint-config`: `eslint` configurations
+- `tailwind`: `tailwind.config.json` already setup in `@workspace/ui`
+- `jest`: `jest.config.ts` already setup in `@workspace/ui`
+- `ts-config`: `tsconfig.json` used throughout the monorepo
+
 ### Folder Structure
 
 ```
@@ -36,6 +53,7 @@ my-turborepo/
 │   │   ├── tailwind.config.ts
 │   │   ├── components.json  (shadcn/ui config)
 │   │   ├── tsconfig.json
+│   │   ├── jest.config.json
 │   │   └── package.json
 │   ├── eslint-config/
 │   │   ├── base.js
@@ -54,11 +72,11 @@ my-turborepo/
 └── README.md
 ```
 
-## Tailwind
+### Tailwind
 
 Your `tailwind.config.ts` and `globals.css` are already set up to use the components from the `ui` package.
 
-## Adding components to packages/ui
+### Adding components to packages/ui
 
 To add components to your packages/ui, run the following command at the root of repo:
 
@@ -66,7 +84,7 @@ To add components to your packages/ui, run the following command at the root of 
 npx shadcn@latest add button -c packages/ui
 ```
 
-## Using components
+### Using components
 
 To use the components in your app, import them from the `ui` package.
 
@@ -74,31 +92,44 @@ To use the components in your app, import them from the `ui` package.
 import { HeroSection } from "@workspace/ui/components/hero"
 ```
 
-## Unit Test 
+### Unit Test 
 From the root directory: 
 
-### Run test
+#### Run test
 
 ```bash
 npm run test
 ```
 
-### Run test coverage
+#### Run test coverage
 
 ```bash
 npm run test:coverage
 ```
 
-### Run test for a specific app
+#### Run test for a specific app
+
 ```bash
 npm run test -- --filter="web"
 ```
 
-## Storybook
+### Storybook
+To start storybook, run the following command:
 
-## Run 
-To start the development, navigate to the root of the repository and run
+```bash
+npm run storybook
+```
+
+### Develop 
+To develop all apps and packages, run the following command:
 
 ```bash
 npm run dev
+```
+
+### Build
+To build all apps and packages, run the folowing commad: 
+
+```bash
+npm run build
 ```
