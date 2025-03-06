@@ -5,7 +5,8 @@
     "types": ["jest", "node", "@testing-library/jest-dom"],
     "baseUrl": ".",
     "paths": {
-      "@workspace/ui/*": ["./src/*"]
+      "@workspace/ui/": ["./src/*"],
+      "@workspace/ui/*": ["src/components/ui/*"]
     }
   },
   "exclude": ["node_modules", "dist"],
