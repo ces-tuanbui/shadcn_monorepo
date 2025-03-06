@@ -6,7 +6,7 @@ type BadgeVariants = keyof typeof BadgeStyle.variants;
 const variants = Object.keys(BadgeStyle.variants) as BadgeVariants[];
 
 const meta = {
-  title: "Atoms/Badge",
+  title: "Badge",
   component: Badge,
   argTypes: {
     variant: {

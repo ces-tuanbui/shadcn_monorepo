@@ -3,15 +3,23 @@ import type { Meta, StoryObj } from "@storybook/react";
 import {
   Avatar,
   AvatarImage,
+  AvatarImageProps,
   AvatarStyle,
+  CustomAvatarProps,
 } from "@workspace/ui/components/ui/avatar";
 
 type AvatarSizes = keyof typeof AvatarStyle.sizes;
 const sizes = Object.keys(AvatarStyle.sizes) as AvatarSizes[];
 
-const meta = {
-  title: "Atoms/Avatar",
-  component: Avatar,
+const AvatarTyped = Avatar as unknown as React.ComponentType<CustomAvatarProps>;
+const AvatarImageTyped =
+  AvatarImage as unknown as React.ForwardRefExoticComponent<
+    Omit<AvatarImageProps & React.RefAttributes<HTMLImageElement>, "ref"> &
+      React.RefAttributes<HTMLImageElement>
+  >;
+const meta: Meta = {
+  title: "Avatar",
+  component: Avatar as unknown as React.ComponentType<CustomAvatarProps>,
   argTypes: {
     size: {
       description: "Defines the size of the avatar",
@@ -37,21 +45,21 @@ const meta = {
       table: {
         category: "Radix",
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "" },
       },
     },
   },
   render: ({ ...args }) => {
     return (
-      <Avatar size={args.size}>
-        <AvatarImage
+      <AvatarTyped {...args} asChild>
+        <AvatarImageTyped
           src="https://xsgames.co/randomusers/avatar.php?g=female"
           alt="Picture of the author"
         />
-      </Avatar>
+      </AvatarTyped>
     );
   },
-} satisfies Meta<typeof Avatar>;
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -79,12 +87,12 @@ export const All: Story = {
     return (
       <div className="mb-4 flex items-center space-x-2">
         {sizes.map((size) => (
-          <Avatar size={size} key={size}>
-            <AvatarImage
+          <AvatarTyped size={size}>
+            <AvatarImageTyped
               src="https://xsgames.co/randomusers/avatar.php?g=female"
               alt="Picture of the author"
             />
-          </Avatar>
+          </AvatarTyped>
         ))}
       </div>
     );

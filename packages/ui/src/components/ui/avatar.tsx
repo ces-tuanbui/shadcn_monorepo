@@ -2,10 +2,16 @@
 
 import { forwardRef } from "react";
 import * as AvatarPrimitive from "@radix-ui/react-avatar";
-import { type AvatarProps } from "@radix-ui/react-avatar";
+import { type AvatarProps as RadixAvatarProps } from "@radix-ui/react-avatar";
 import { cva, type VariantProps } from "class-variance-authority";
 
 import { cn } from "@workspace/ui/lib/utils";
+export interface CustomAvatarProps
+  extends RadixAvatarProps,
+    VariantProps<typeof avatarVariants> {}
+export interface AvatarImageProps
+  extends React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Image>,
+    React.ImgHTMLAttributes<HTMLImageElement> {}
 
 const AvatarStyle = {
   base: "relative flex shrink-0 overflow-hidden rounded-full",
@@ -28,8 +34,7 @@ const avatarVariants = cva(AvatarStyle.base, {
 
 const Avatar = forwardRef<
   React.ElementRef<typeof AvatarPrimitive.Root>,
-  React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Root> &
-    VariantProps<typeof avatarVariants>
+  CustomAvatarProps
 >(({ size, className, ...props }, ref) => (
   <AvatarPrimitive.Root
     ref={ref}
@@ -69,11 +74,4 @@ const AvatarFallback = forwardRef<
 
 AvatarFallback.displayName = AvatarPrimitive.Fallback.displayName;
 
-export {
-  Avatar,
-  AvatarImage,
-  AvatarFallback,
-  AvatarProps,
-  avatarVariants,
-  AvatarStyle,
-};
+export { Avatar, AvatarImage, AvatarFallback, avatarVariants, AvatarStyle };
