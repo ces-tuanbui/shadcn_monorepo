@@ -15,7 +15,7 @@ const sizes = Object.keys(ButtonStyle.sizes) as ButtonSizes[];
 
 const meta: Meta = {
   title: "Button",
-  component: Button as unknown as React.ComponentType<ButtonProps>,
+  component: Button,
   argTypes: {
     variant: {
       description: "Defines the variant of the button",
@@ -162,13 +162,13 @@ export const All: Story = {
             <div className="w-[100px] text-sm text-slate-500">{variant}</div>
             <div className="mb-4 flex items-center space-x-2">
               {sizes.map((size) => (
-                <ButtonTyped
+                <Button
                   key={`${variant}-${size}`}
                   variant={variant as ButtonProps["variant"]}
                   size={size as ButtonProps["size"]}
                 >
                   {size === "icon" ? "🚀" : `Button (${size})`}
-                </ButtonTyped>
+                </Button>
               ))}
             </div>
           </div>

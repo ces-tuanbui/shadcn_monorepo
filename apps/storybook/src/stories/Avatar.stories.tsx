@@ -5,14 +5,6 @@ import { Avatar, AvatarImage, AvatarStyle } from "@workspace/ui/index";
 type AvatarSizes = keyof typeof AvatarStyle.sizes;
 const sizes = Object.keys(AvatarStyle.sizes) as AvatarSizes[];
 
-const AvataImageTyped =
-  AvatarImage as unknown as React.ForwardRefExoticComponent<
-    Omit<
-      AvatarPrimitive.AvatarImageProps & React.RefAttributes<HTMLImageElement>,
-      "ref"
-    > &
-      React.RefAttributes<HTMLImageElement>
-  >;
 const meta: Meta = {
   title: "Avatar",
   component: Avatar,
@@ -48,7 +40,7 @@ const meta: Meta = {
   render: ({ ...args }) => {
     return (
       <Avatar size={args.size}>
-        <AvataImageTyped
+        <AvatarImage
           src="https://xsgames.co/randomusers/avatar.php?g=female"
           alt="Picture of the author"
         />
@@ -84,7 +76,7 @@ export const All: Story = {
       <div className="mb-4 flex items-center space-x-2">
         {sizes.map((size) => (
           <Avatar size={size}>
-            <AvataImageTyped
+            <AvatarImage
               src="https://xsgames.co/randomusers/avatar.php?g=female"
               alt="Picture of the author"
             />

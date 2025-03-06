@@ -1,6 +1,6 @@
 import { ChevronsDownIcon } from "lucide-react";
 import Link from "next/link";
-import { Separator } from "./ui/separator/separator";
+import { Separator } from "../separator/separator";
 
 export const FooterSection = () => {
   return (

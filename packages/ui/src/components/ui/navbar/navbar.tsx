@@ -10,10 +10,10 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "./ui/sheet/sheet";
-import { Button } from "./ui/button/button";
-import { Separator } from "./ui/separator/separator";
-import { ToggleTheme } from "./toogle-theme";
+} from "../sheet";
+import { Button } from "../button";
+import { Separator } from "../separator";
+import { ToggleTheme } from "../../toogle-theme";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -21,7 +21,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-} from "./ui/navigation-menu/navigation-menu";
+} from "../navigation-menu/navigation-menu";
 
 interface RouteProps {
   href: string;
