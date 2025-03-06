@@ -6,6 +6,7 @@
       "@/*": ["./*"],
       "@workspace/ui/*": ["../../packages/ui/src/*"]
     },
+    "types": ["jest", "node", "@testing-library/jest-dom"],
     "plugins": [
       {
         "name": "next"
@@ -13,6 +14,8 @@
     ]
   },
   "include": [
+    "jest.setup.ts",
+     "**/*.test.ts", "**/*.test.tsx",
     "next-env.d.ts",
     "next.config.mjs",
     "**/*.ts",
