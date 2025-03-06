@@ -2,6 +2,12 @@
   "$schema": "https://turbo.build/schema.json",
   "ui": "tui",
   "tasks": {
+    "test": {},
+    "test:watch": {
+      "cache": false, 
+      "persistent": true
+    },
+    "test:coverage": {},
     "build": {
       "dependsOn": ["^build"],
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
