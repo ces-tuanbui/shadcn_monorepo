@@ -11,9 +11,9 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "./ui/sheet";
-import { Button } from "./ui/button";
-import { Separator } from "./ui/separator";
-import { ToggleTheme } from "./toogle-theme";
+import { Button } from "@workspace/ui/components/ui/button";
+import { Separator } from "@workspace/ui/components/ui/separator";
+import { ToggleTheme } from "@workspace/ui/components/toogle-theme";
 import {
   NavigationMenu,
   NavigationMenuContent,
