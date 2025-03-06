@@ -75,6 +75,24 @@ import { HeroSection } from "@workspace/ui/components/hero"
 ```
 
 ## Unit Test 
+From the root directory: 
+
+### Run test
+
+```bash
+npm run test
+```
+
+### Run test coverage
+
+```bash
+npm run test:coverage
+```
+
+### Run test for a specific app
+```bash
+npm run test -- --filter="web"
+```
 
 ## Storybook
 
