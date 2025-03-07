@@ -12,7 +12,7 @@ type ButtonSizes = keyof typeof ButtonStyle.sizes;
 const variants = Object.keys(ButtonStyle.variants) as ButtonVariants[];
 const sizes = Object.keys(ButtonStyle.sizes) as ButtonSizes[];
 
-const meta: Meta = {
+const meta: Meta<typeof Button> = {
   title: "Button",
   component: Button,
   argTypes: {
@@ -60,7 +60,7 @@ const meta: Meta = {
       },
     },
   },
-};
+} satisfies Meta<typeof Button>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

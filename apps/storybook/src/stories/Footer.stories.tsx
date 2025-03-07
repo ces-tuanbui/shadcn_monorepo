@@ -8,7 +8,7 @@ const meta: Meta<typeof FooterSection> = {
   parameters: {
     layout: "fullscreen",
   },
-};
+} satisfies Meta<typeof FooterSection>;
 
 export default meta;
 

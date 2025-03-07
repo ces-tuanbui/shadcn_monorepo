@@ -8,7 +8,7 @@ import {
 type AvatarSizes = keyof typeof AvatarStyle.sizes;
 const sizes = Object.keys(AvatarStyle.sizes) as AvatarSizes[];
 
-const meta: Meta = {
+const meta: Meta<typeof Avatar> = {
   title: "Avatar",
   component: Avatar,
   argTypes: {
@@ -50,7 +50,7 @@ const meta: Meta = {
       </Avatar>
     );
   },
-};
+} satisfies Meta<typeof Avatar>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
