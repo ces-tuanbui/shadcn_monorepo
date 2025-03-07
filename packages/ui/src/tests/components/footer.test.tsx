@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import { FooterSection } from "../../components/ui/footer/footer";
+import { FooterSection } from "../../components/ui/footer";
 import "@testing-library/jest-dom";
 
 describe("FooterSection Component", () => {

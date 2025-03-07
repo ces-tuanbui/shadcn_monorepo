@@ -51,7 +51,6 @@
     "./jest.setup": "./jest.setup.ts",
     "./lib/*": "./src/lib/*.ts",
     "./components/*": "./src/components/*.tsx",
-    "./hooks/*": "./src/hooks/*.ts",
-    "./index": "./index.ts"
+    "./hooks/*": "./src/hooks/*.ts"
   }
 }

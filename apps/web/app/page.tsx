@@ -1,4 +1,5 @@
-import { FooterSection, HeroSection } from "@workspace/ui/index";
+import { HeroSection } from "@workspace/ui/components/ui/hero";
+import { FooterSection } from "@workspace/ui/components/ui/footer";
 
 export const metadata = {
   title: "Shadcn - Landing template",
