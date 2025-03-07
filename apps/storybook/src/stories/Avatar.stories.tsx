@@ -1,6 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import * as AvatarPrimitive from "@radix-ui/react-avatar";
-import { Avatar, AvatarImage, AvatarStyle } from "@workspace/ui/index";
+import {
+  Avatar,
+  AvatarImage,
+  AvatarStyle,
+} from "@workspace/ui/components/ui/avatar";
 
 type AvatarSizes = keyof typeof AvatarStyle.sizes;
 const sizes = Object.keys(AvatarStyle.sizes) as AvatarSizes[];

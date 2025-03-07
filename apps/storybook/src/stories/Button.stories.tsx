@@ -2,10 +2,9 @@ import type { Meta, StoryObj } from "@storybook/react";
 
 import {
   Button,
-  ButtonStyle,
-  buttonVariants,
   ButtonProps,
-} from "@workspace/ui/components/ui/button/button";
+  ButtonStyle,
+} from "@workspace/ui/components/ui/button";
 
 type ButtonVariants = keyof typeof ButtonStyle.variants;
 type ButtonSizes = keyof typeof ButtonStyle.sizes;

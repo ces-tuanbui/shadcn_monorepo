@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { Badge, BadgeStyle } from "@workspace/ui/components/ui/badge/badge";
+import { Badge, BadgeStyle } from "@workspace/ui/components/ui/badge";
 
 type BadgeVariants = keyof typeof BadgeStyle.variants;
 const variants = Object.keys(BadgeStyle.variants) as BadgeVariants[];
