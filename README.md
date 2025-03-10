@@ -133,3 +133,9 @@ To build all apps and packages, run the folowing commad:
 ```bash
 npm run build
 ```
+
+### Seed data strapi
+To add seed data to the app, run the following command:
+```bash
+npm run seed
+```
