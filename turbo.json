@@ -23,5 +23,9 @@
       "cache": false,
       "persistent": true
     }
-  }
+  },
+  "globalEnv": [
+    "STRAPI_BASE_URL",
+    "PREVIEW_SECRET"
+  ]
 }
