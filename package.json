@@ -11,7 +11,7 @@
     "storybook": "cd apps/storybook && npm run storybook",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "check-types": "turbo run check-types",
-    "seed": "cd apps/strapi && npm run strapi import -- -f ./seed-data.tar.gz --force"
+    "seed": "cd apps/api/strapi && npm run strapi import -- -f ./seed-data.tar.gz --force"
   },
   "devDependencies": {
     "prettier": "^3.5.3",
