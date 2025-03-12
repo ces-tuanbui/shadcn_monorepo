@@ -151,7 +151,6 @@ export const Icon: Story = {
     children: "x",
   },
 };
-const ButtonTyped = Button as React.ComponentType<ButtonProps>;
 export const All: Story = {
   render: () => {
     return (

@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_elements_price_cards",
+  "info": {
+    "displayName": "Price Card"
+  },
+  "options": {},
+  "attributes": {
+    "selected": {
+      "type": "boolean"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "price": {
+      "type": "string"
+    },
+    "feature": {
+      "type": "component",
+      "repeatable": true,
+      "component": "elements.feature"
+    },
+    "link": {
+      "type": "component",
+      "repeatable": false,
+      "component": "elements.link"
+    }
+  }
+}
