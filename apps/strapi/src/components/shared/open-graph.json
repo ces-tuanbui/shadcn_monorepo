@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_shared_open_graphs",
+  "info": {
+    "displayName": "OpenGraph"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "url": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    }
+  }
+}

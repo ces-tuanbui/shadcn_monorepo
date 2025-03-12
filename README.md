@@ -35,6 +35,7 @@ my-turborepo/
 │   │   ├── tsconfig.json
 │   │   └── package.json
 │   └── storybook/  
+|   └── strapi/
 ├── packages/
 │   ├── ui/
 │   │   ├── src/
@@ -132,4 +133,11 @@ To build all apps and packages, run the folowing commad:
 
 ```bash
 npm run build
+```
+### Build
+To build all apps and packages, run the folowing commad: 
+
+### Seed data to strapi
+```bash
+npm run seed
 ```
